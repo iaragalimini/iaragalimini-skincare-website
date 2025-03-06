@@ -1,0 +1,988 @@
+/* General Styles */
+
+body{
+    background-color:rgb(247, 249, 250);
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: "Mulish", serif;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+/* Decidí ponerlo en General porque lo reutilizaré en otras paginas, más adelante*/
+
+.second-button {
+    display: inline-block;
+    background-color: rgb(243, 200, 80);
+    padding: 12px 20px; /*12 arriba y abajo- 20hacia los lado*/
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: black;
+    transition: background-color 0.3s;
+    width: fit-content;
+}
+
+.second-button:hover {
+    background-color: #e5c469;
+}
+
+.company-logo{
+    width:100px;
+    height: auto;
+    padding: 8px
+}  
+
+/* Header */
+
+/*contenedor del logo y navbar*/
+
+.container-superior {
+    position: fixed; /* navbar fija */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* para que quede sobre el contenido */
+    backdrop-filter: blur(10px); /* fondo blureado */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container-superior ul{
+    text-decoration: none;
+    background-color: rgba(111, 0, 155, 0.159);
+    border-radius: 20px;
+    padding: 10px 25px;
+}
+
+.container-superior ul li a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.navbar{
+    position: relative;
+    transform: translateX(-85%)
+}
+
+
+/* Hero video + title + paragraph + button*/
+
+.hero-section{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-principal {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* para que la imagen cubra todo el espacio sin deformarse */
+}
+
+.hero-content{
+    text-align: center;
+    width: 90%; /* Evita que se desborde en pantallas chicas */
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute; /* Para que esté sobre el video */
+    top: 50%; /* Lo mueve al centro */
+    left: 50%;
+    transform: translate(-50%, -60%); /* -50 -50 Lo centra perfectamente, yo lo puse un poco mas arriba porque me gusta mas visualmente */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido */
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: clamp(35px, 7vw, 75px); /* Para que se adapte al tamaño de la pantalla */
+    color: rgb(0, 0, 0);
+    margin-bottom: 24px;
+}
+
+.hero-paragraph {
+    font-size: 18px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Controla el ancho del texto */
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(243, 217, 234);
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: rgb(225, 180, 215);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/*Main*/
+
+/*Hero*/
+
+.sections-title{
+    font-size: clamp(28px, 8vw, 40px);
+    margin-top: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.sections-paragraph{
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Controla el ancho del texto */
+    margin-bottom: 40px;
+}
+
+
+/*Services*/
+
+.services-header {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    max-width: 900px; /* Limita el ancho */
+    width: 100%;
+    padding: 0 10%; /* Espaciado lateral */
+    margin: 0 auto auto; /* para centrar el contenedor */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra el contenido */
+}
+
+.services-paragraph {
+    font-size: 18px;
+    max-width: 800px;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.services-subtext {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Evita que se extienda demasiado */
+    text-align: left; /* Alineación más natural */
+    padding: 0 10%; /* Ajuste de espaciado lateral */
+    margin-bottom: 20px;
+}
+
+/*Estilos modificados de Cards Bootstrap*/
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    background-color: rgba(243, 217, 234, 0.5);
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    border-color: rgba(243, 217, 234, 0.5);
+    max-width: 100%;
+    width: 320px;
+}
+
+.btn{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(243, 200, 80);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+}
+
+.card-img-top{
+    border-radius: 9px;
+    margin-top: 5px;
+}
+
+.card-text{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*Products*/
+
+.carousel-homepage {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: center; /* como son columnas, se alinea verticalmente */
+    background-color: rgba(243, 217, 234, 0.5);
+    padding: 50px;
+    margin: 1.5rem 4.6rem; /*para que quede alineado con las cards de servicios */
+    max-width: 100vw; /* Ajusta el ancho del contenedor */
+    border-radius: 12px;
+}
+
+
+.carousel-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    max-width: 400px; /* limita el ancho del texto */
+}
+
+.title-card-carousel{
+    text-shadow:2px 2px 5px rgba(0, 0, 0, 0.5); /*posicion en px de la sombra*/
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    width: 100%;
+    height: 450px; /* Ajusta la altura */
+    border-radius: 8px;
+}
+
+/* para asegurarme que las flechas de navegación estén bien posicionadas */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 7%;
+}
+
+
+/*Footer*/
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 90px;
+    background: #f8f8f8;
+    color: black;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-container a {
+    color: rgba(233, 41, 236, 0.672);
+}
+
+/* Seccion redes sociales*/
+
+.social-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.follow-text {
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons li img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* ----ABOUT US PAGE----*/
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+}
+
+.about-content {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos verticalmente */
+    gap: 0.7rem; /* Espacio entre el título, párrafo y botón */
+    height: 100%;
+}
+
+.title-about{
+    margin-left: 2rem;
+    margin-bottom: 0rem;
+}
+
+.about-paragraph{
+    max-width: 600px;
+}
+
+.about-btn{
+    margin-left: 2rem;
+}
+
+.about-image {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end; /* Mueve la imagen hacia la derecha */
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 50px;
+    margin: 1.5rem 4.6rem;
+    max-width: 100vw;
+    gap: 40px;
+    text-align: left;
+}
+
+.second-image{
+        flex: 1; /* La imagen ocupa 1 parte del espacio */
+        display: flex;
+        justify-content: flex-start; /* Alinea la imagen a la izquierda */
+}
+
+
+.about-content-second{
+    flex: 2;
+    display: flex;
+    flex-direction: column; /* Asegura que el título y el párrafo estén en columna */
+    text-align: left;
+    width: 100px; 
+    margin-left: 8rem; 
+    gap: 1rem;
+}
+
+/* ----PRODUCTS PAGE---- */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 50px;
+    justify-items: center;
+  }
+  
+  .product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /*busqué los valores especificos para que quede sutil y bien*/
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 20rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .product-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-price {
+    font-size: 1.1em;
+    color: rgba(233, 41, 236, 0.672);
+    font-weight: 500;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+.title-products{
+    margin-top: 130px;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+
+/*----SERVICES PAGE ----*/
+
+.hero-services{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.services-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+.services-img-container {
+    margin: 20px 0; 
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño de las imágenes */
+}
+
+.services-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para los párrafos */
+.services-paragraph-container {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 2px 0;
+}
+
+.services-paragraph {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+
+/* ----CONTACT PAGE---- */
+
+.hero-contact{
+        text-align: center;
+        width: 90%; /* Evita que se desborde en pantallas pequeñas */
+        max-width: 1200px;
+        margin: 0 auto;
+        position: absolute; /* Para que esté sobre el video */
+        top: 30%; /* Lo mueve al centro */
+        left: 50%;
+        transform: translate(-50%, -60%); /* -50 -50 Lo centra perfectamente, yo lo puse un poco mas arriba porque me gusta mas visualmente */
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el contenido */
+        justify-content: center;
+    }
+
+
+.contact-title{
+margin-bottom: -12px;
+}
+
+
+/* Sección del formulario (estructura + alineación) */
+.form-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    margin-top: 230px;
+}
+
+/* Estilos del formulario */
+.form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas del formulario */
+.form label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Inputs y textarea */
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Por default el tamaño del textarea puede ser redimensionado, con este parametro lo deshabilito*/
+.form textarea {
+    resize: none;
+}
+
+
+/*---- MEDIA QUERIES TABLET ----*/
+
+@media (max-width: 1024px){
+    .container-superior{
+        flex-direction: column;
+        position:relative;
+        align-items: center;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+    
+    }  
+
+  .navbar ul{
+    margin: -10%;
+    gap: 1rem;
+
+  }
+    }  
+
+
+/* TABLET - HERO PAGE */
+
+@media (max-width: 1024px) {
+    .container-superior {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-paragraph {
+        font-size: 16px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-homepage {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* TABLET - PRODUCT PAGE */
+
+@media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+  }
+
+/* TABLET - CONTACT PAGE */
+
+@media (max-width: 1024px) {
+    .hero-contact {
+        top: 40%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+    }
+
+    .form-section {
+        margin-top: 150px;
+        padding: 30px 10px;
+    }
+
+    .form {
+        max-width: 90%;
+    }
+}
+
+/* TABLET - SERVICES PAGE */
+
+@media (max-width: 1024px) {
+    .services-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 48%; /* Dos tarjetas por fila */
+        margin-bottom: 20px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}
+
+    .services-img-container {
+        width: 80%; /* Hacer que la imagen ocupe más espacio */
+        margin: 0 auto;
+    }
+
+    .services-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .services-paragraph-container {
+        padding: 0 20px;
+    }
+
+    .services-paragraph {
+        font-size: 16px; /* Un poco más grande para mejor legibilidad */
+    }
+
+    .services-subtext {
+        font-size: 16px;
+    }
+
+
+/* TABLET - ABOUT US PAGE */
+
+@media (max-width: 1024px) {
+    .about-hero {
+        flex-direction: row;
+        align-items: center;
+        padding: 4rem 2rem; /* Aumentar el padding para mejorar el espacio */
+    }
+
+    .about-title {
+        margin-left: 20px;
+        margin-bottom: 1rem;
+        font-size: 30px; /* Tamaño adecuado para tabletas */
+    }
+
+    .about-btn {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .about-image {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+    .about-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .about-content-second {
+        width: 48%; /* Dos columnas en tablet */
+    }
+
+
+    .about-content {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .about-title {
+        font-size: 32px; /* Título más grande */
+    }
+
+    .about-btn {
+        font-size: 16px;
+    }
+
+
+
+/*---- MEDIA QUERIES MOBILE ----*/
+
+/* MOBILE - NAVBAR */
+
+@media (max-width: 768px){
+    .container-superior{
+        flex-direction: column;
+        position:relative;
+        align-items: center;
+    }
+    
+    .navbar a {
+        font-size: 14px;
+    
+    }  
+
+  .navbar ul{
+    margin: -10%;
+    gap: 1rem;
+
+  }
+    }   
+
+
+/* MOBILE - HERO PAGE */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .hero-paragraph {
+        font-size: 16px;
+    }
+
+    .hero-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .carousel-homepage {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .carousel-inner img {
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .social-container {
+        justify-content: center;
+    }
+
+}
+
+/* MOBILE - PRODUCT PAGE */
+
+@media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr); /*sera 1 product por fila */
+      padding: 20px;
+    }
+  
+    .product-item {
+      width: 100%; /* Que ocupe el 100% en pantallas pequeñas */
+    }
+  
+    .title-products {
+      margin-top: 100px;
+    }
+  }
+
+/* MOBILE - CONTACT PAGE */
+
+@media (max-width: 768px) {
+    .hero-contact {
+        top: 35%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-section {
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    .form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form label {
+        font-size: 0.9rem;
+    }
+
+    .form input,
+    .form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* MOBILE - SERVICES PAGE */
+
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-img-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .services-img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-paragraph-container {
+        padding: 0 15px;
+    }
+
+    .services-paragraph {
+        font-size: 14px; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .services-subtext {
+        font-size: 14px;
+    }
+}
+
+/* MOBILE - ABOUT US PAGE */
+
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .about-title {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        font-size: 26px; /* Ajusta el tamaño del título */
+    }
+
+    .about-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .about-image {
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Centra la imagen */
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .about-content-second {
+        width: 100%;
+        margin-left: 0; /* Centra el contenido */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        width: 100%;
+        padding: 10px;
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-btn {
+        font-size: 14px;
+    }
+}
