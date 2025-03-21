@@ -1,0 +1,203 @@
+/* Hero video + title + paragraph + button*/
+
+@use "../utilities/variables" as *;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+
+
+.hero-section{
+    position: relative;
+    height: 100vh;
+    @extend %flexBasico;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-principal {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; /* para que la imagen cubra todo el espacio sin deformarse */
+}
+
+.hero-content{
+    text-align: center;
+    width: 90%; /* Evita que se desborde en pantallas chicas */
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute; /* Para que esté sobre el video */
+    top: 50%; /* Lo mueve al centro */
+    left: 50%;
+    transform: translate(-50%, -60%); /* -50 -50 Lo centra perfectamente, yo lo puse un poco mas arriba porque me gusta mas visualmente */
+
+    @extend %flexBasico;
+}
+
+.hero-title {
+    font-size: clamp(35px, 7vw, 75px); /* Para que se adapte al tamaño de la pantalla */
+    color: rgb(0, 0, 0);
+    margin-bottom: 24px;
+}
+
+.hero-paragraph {
+    font-size: $fontSizeMedium;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Controla el ancho del texto */
+    padding: 0 5%;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    font-size: $fontSizeMedium;
+    color: rgb(0, 0, 0);
+    background-color: rgb(243, 217, 234);
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:hover{
+    background-color: rgb(225, 180, 215);
+    border: 2px solid rgb(0, 0, 0);
+    }
+}
+
+/*Main*/
+
+/*Hero*/
+
+.sections-title{
+    font-size: clamp(28px, 8vw, 40px);
+    margin-top: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.sections-paragraph{
+    font-size: $fontSizeBase;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Controla el ancho del texto */
+    margin-bottom: 40px;
+}
+
+/*Services*/
+
+.services-header {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    max-width: 900px; /* Limita el ancho */
+    width: 100%;
+    padding: 0 10%; /* Espaciado lateral */
+    margin: 0 auto auto; /* para centrar el contenedor */
+
+    @extend %flexBasico;
+}
+
+.services-paragraph {
+    font-size: $fontSizeMedium;
+    max-width: 800px;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.services-subtext {
+    font-size: $fontSizeBase;
+    color: rgb(0, 0, 0);
+    max-width: 800px; /* Evita que se extienda demasiado */
+    text-align: left; /* Alineación más natural */
+    padding: 0 10%; /* Ajuste de espaciado lateral */
+    margin-bottom: 20px;
+}
+
+/*Estilos modificados de Cards Bootstrap*/
+
+.services-container {
+   
+    flex-wrap: wrap;
+    
+    @include flexAvanzado(flex,center);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    background-color: rgba(243, 217, 234, 0.5);
+    padding: 15px;
+    border-radius: $borderRadiusLarge;
+    border: none;
+    border-color: rgba(243, 217, 234, 0.5);
+    max-width: 100%;
+    width: 320px;
+}
+
+.btn{
+    font-size: $fontSizeBase;
+    color: rgb(0, 0, 0);
+    background-color: $colorButton;
+    padding: 0.4rem 0.8rem;
+    border-radius: $borderRadiusLarge;
+}
+
+.card-img-top{
+    border-radius: $borderRadiusMedium;
+    margin-top: 5px;
+}
+
+.card-text{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*Products*/
+
+.carousel-homepage {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: center; /* como son columnas, se alinea verticalmente */
+    background-color: rgba(243, 217, 234, 0.5);
+    padding: 50px;
+    margin: 1.5rem 4.6rem; /*para que quede alineado con las cards de servicios */
+    max-width: 100vw; /* Ajusta el ancho del contenedor */
+    border-radius: $borderRadiusLarge;
+}
+
+
+.carousel-header {
+    flex-direction: column;
+
+    @include flexAvanzado(flex,center);
+    text-align: left;
+    max-width: 400px; /* limita el ancho del texto */
+}
+
+.title-card-carousel{
+    text-shadow:2px 2px 5px rgba(0, 0, 0, 0.5); /*posicion en px de la sombra*/
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    width: 100%;
+    height: 450px; /* Ajusta la altura */
+    border-radius: $borderRadiusSmall;
+}
+
+/* para asegurarme que las flechas de navegación estén bien posicionadas */
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 7%;
+}
+

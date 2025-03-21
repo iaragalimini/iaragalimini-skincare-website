@@ -1,0 +1,267 @@
+/*---- MEDIA QUERIES MOBILE ----*/
+
+@use "../utilities/variables" as *; 
+@use "../utilities/mixins" as *;    
+@use "../utilities/extends" as *;
+
+/* MOBILE - NAVBAR */
+
+@media (max-width: 768px){
+    .container-superior{
+        flex-direction: column;
+        position:relative;
+        align-items: center;
+    }
+    
+    .navbar{
+        position: relative;
+        transform: translateX(0)
+    }
+    
+    .navbar a {
+        font-size: $fontSizeSmall;
+        align-items: center;
+    
+    }  
+
+  .navbar ul{
+    margin: -10%;
+    gap: 1rem;
+
+  }
+
+  .company-logo {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+    margin-bottom: 2rem;
+  }
+
+    }   
+
+
+
+
+/* MOBILE - HERO PAGE */
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .hero-paragraph {
+        font-size: $fontSizeBase;
+    }
+
+    .hero-button {
+        font-size: $fontSizeBase;
+        padding: 10px 20px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .carousel-homepage {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .carousel-inner img {
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .social-container {
+        justify-content: center;
+    }
+
+}
+
+/* MOBILE - PRODUCT PAGE */
+
+@media (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(1, 1fr); /*sera 1 product por fila */
+      padding: 20px;
+    }
+  
+    .product-item {
+      width: 100%; /* Que ocupe el 100% en pantallas pequeñas */
+    }
+  
+    .title-products {
+      margin-top: 100px;
+    }
+  }
+
+/* MOBILE - CONTACT PAGE */
+
+@media (max-width: 768px) {
+    .hero-contact {
+        top: 35%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-section {
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    .form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .form label {
+        font-size: 0.9rem;
+    }
+
+    .form input,
+    .form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* MOBILE - SERVICES PAGE */
+
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-img-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .services-img {
+        width: 100%;
+        height: auto;
+        border-radius: $borderRadiusMedium;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-paragraph-container {
+        padding: 0 15px;
+    }
+
+    .services-paragraph {
+        font-size: $fontSizeSmall; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .services-subtext {
+        font-size: $fontSizeSmall;
+    }
+}
+
+/* MOBILE - ABOUT US PAGE */
+
+@media (max-width: 768px) {
+    .about-hero {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .about-title {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        font-size: 26px; /* Ajusta el tamaño del título */
+    }
+
+    .about-btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .about-image {
+        width: 90%;
+        max-width: 400px;
+        justify-content: center;
+        
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: cover;
+        border-radius: $borderRadiusMedium;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .about-content-second {
+        width: 90%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .about-title {
+        font-size: $fontSizeLarge;
+    }
+
+    .about-btn {
+        font-size: $fontSizeSmall;
+        margin: 0 auto;
+    }
+
+    .second-image {
+        width: 90%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .second-image img {
+        width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+    }
+
+
+}

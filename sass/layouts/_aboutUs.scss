@@ -1,0 +1,85 @@
+/* ----ABOUT US PAGE----*/
+
+@use "../utilities/variables" as *;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+
+.about-hero {
+    align-items: center;
+    flex-wrap: wrap;
+    @include flexAvanzado(flex,center);
+    padding: 4rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.about-content {
+    width: 50%;
+    text-align: left;
+    @include flexAvanzado(flex,center);
+    
+    flex-direction: column;
+    
+    gap: 0.7rem; /* Espacio entre el título, párrafo y botón */
+    height: 100%;
+    max-width: 600px;
+}
+
+.title-about{
+    margin-left: 2rem;
+    margin-bottom: 0rem;
+}
+
+.about-paragraph{
+    max-width: 600px;
+}
+
+.about-btn{
+    margin-left: 2rem;
+}
+
+.about-image {
+    width: 50%;
+    @include flexAvanzado(flex,center);
+    align-items: center;
+    max-width: 500px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: cover;
+        border-radius: $borderRadiusMedium;
+    }
+}
+
+
+.about-section{
+    align-items: center;
+    flex-wrap: wrap; 
+    @include flexAvanzado(flex,space-between);
+    text-align: left;
+    padding: 4rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar la sección */
+    overflow: hidden;
+}
+
+.second-image{
+        flex: 1; /* La imagen ocupa 1 parte del espacio */
+        @include flexAvanzado(flex,flex-start);
+}
+
+
+.about-content-second{
+    display: flex;
+    flex-direction: column; /* Asegura que el título y el párrafo estén en columna */
+    text-align: left;
+    width: 50%; 
+    gap: 1rem;
+    max-width: 600px;
+}

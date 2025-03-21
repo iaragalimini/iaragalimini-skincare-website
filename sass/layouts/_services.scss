@@ -1,0 +1,46 @@
+/*----SERVICES PAGE ----*/
+
+@use "../utilities/variables" as *;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+
+.hero-services{
+    @extend %flexBasico;
+    text-align: center;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.services-page {
+    @extend %flexBasico;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para las imágenes */
+.services-img-container {
+    margin: 20px 0; 
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño de las imágenes */
+}
+
+.services-img {
+    width: 100%;
+    height: auto;
+    border-radius: $borderRadiusMedium;
+}
+
+/* Estilos para los párrafos */
+.services-paragraph-container {
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 2px 0;
+}
+
+.services-paragraph {
+    font-size: $fontSizeBase;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+}

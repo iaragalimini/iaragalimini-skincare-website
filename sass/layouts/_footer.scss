@@ -1,0 +1,45 @@
+/*Footer*/
+
+@use "../utilities/variables" as *;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+
+.footer-container{
+
+    @include flexAvanzado(flex,space-between);
+    align-items: center;
+    padding: 10px 90px;
+    background: #f8f8f8;
+    color: black;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    a{
+        color: rgba(233, 41, 236, 0.672); 
+    }
+}
+
+
+
+/* Seccion redes sociales*/
+
+.social-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.follow-text {
+    font-size: $fontSizeSmall;
+}
+
+.social-icons {
+
+    @include flexAvanzado(flex,center);
+    gap: 10px;
+
+    li img{
+    width: 30px;
+    height: 30px; 
+    }
+}

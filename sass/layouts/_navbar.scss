@@ -1,0 +1,44 @@
+/* Header */
+
+@use "../utilities/variables" as *;
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+
+/*contenedor del logo y navbar*/
+
+.container-superior {
+    position: fixed; /* navbar fija */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* para que quede sobre el contenido */
+    backdrop-filter: blur(10px); /* fondo blureado */
+    padding: 15px 40px;
+    @include flexAvanzado(flex,space-between);
+    align-items: center;
+    box-sizing: border-box;
+
+    ul{
+    text-decoration: none;
+    background-color: rgba(111, 0, 155, 0.159);
+    border-radius: $borderRadiusXlarge;
+    padding: 10px 25px;
+    
+        li a{
+            text-decoration: none;
+            color:rgb(255, 255, 255);
+        }
+    }
+}
+
+.navbar{
+    position: relative;
+    transform: translateX(-85%)
+}
+
+.company-logo {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+  }
+

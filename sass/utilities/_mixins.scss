@@ -1,0 +1,4 @@
+@mixin flexAvanzado($displayValor, $justifyValor){
+    display: $displayValor;
+    justify-content: $justifyValor;
+}

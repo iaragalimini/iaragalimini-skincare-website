@@ -1,0 +1,63 @@
+/* ----CONTACT PAGE---- */
+
+@use "../utilities/variables" as *; 
+@use "../utilities/mixins" as *;    
+@use "../utilities/extends" as *;
+
+.hero-contact{
+    text-align: center;
+    width: 90%; /* Evita que se desborde en pantallas pequeñas */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute; /* Para que esté sobre el video */
+    top: 30%; /* Lo mueve al centro */
+    left: 50%;
+    transform: translate(-50%, -60%); /* -50 -50 Lo centra perfectamente, yo lo puse un poco mas arriba porque me gusta mas visualmente */
+
+    @extend %flexBasico;
+}
+
+
+.contact-title{
+margin-bottom: -12px;
+}
+
+
+/* Sección del formulario (estructura + alineación) */
+.form-section {
+@include flexAvanzado(flex,center);
+padding: 50px 20px;
+margin-top: 230px;
+}
+
+/* Estilos del formulario */
+.form {
+width: 100%;
+max-width: 500px;
+background: #fff;
+padding: 30px;
+border-radius: $borderRadiusMedium;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+label{
+    font-size: $fontSizeBase;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: $borderRadiusSmall;
+    font-size: $fontSizeBase;
+}
+
+textarea{
+    resize:none;
+}
+}
+
