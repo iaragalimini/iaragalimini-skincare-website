@@ -41,6 +41,8 @@
 }
 
 .about-image {
+    display: flex;
+    flex-direction: row;
     width: 50%;
     @include flexAvanzado(flex,center);
     align-items: center;

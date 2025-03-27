@@ -342,6 +342,8 @@ ul {
 }
 
 .about-image {
+  display: flex;
+  flex-direction: row;
   width: 50%;
   display: flex;
   justify-content: center;
