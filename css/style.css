@@ -59,10 +59,13 @@ ul {
   box-sizing: border-box;
 }
 .container-superior ul {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   background-color: rgba(111, 0, 155, 0.159);
   border-radius: 20px;
   padding: 10px 25px;
+  align-items: center;
 }
 .container-superior ul li a {
   text-decoration: none;
@@ -70,10 +73,9 @@ ul {
 }
 
 .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .company-logo {
@@ -305,9 +307,14 @@ ul {
 /* ----ABOUT US PAGE----*/
 .about-hero {
   align-items: center;
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .about-content {
@@ -318,6 +325,7 @@ ul {
   flex-direction: column;
   gap: 0.7rem; /* Espacio entre el título, párrafo y botón */
   height: 100%;
+  max-width: 600px;
 }
 
 .title-about {
@@ -334,26 +342,32 @@ ul {
 }
 
 .about-image {
-  width: 60%;
+  width: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  overflow: hidden;
 }
 .about-image img {
   width: 100%;
   max-width: 500px;
   height: auto;
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .about-section {
   align-items: center;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  padding: 50px;
-  margin: 1.5rem 4.6rem;
-  max-width: 100vw;
-  gap: 40px;
   text-align: left;
+  padding: 4rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar la sección */
+  overflow: hidden;
 }
 
 .second-image {
@@ -363,13 +377,12 @@ ul {
 }
 
 .about-content-second {
-  flex: 2;
   display: flex;
   flex-direction: column; /* Asegura que el título y el párrafo estén en columna */
   text-align: left;
-  width: 100px;
-  margin-left: 8rem;
+  width: 50%;
   gap: 1rem;
+  max-width: 600px;
 }
 
 /*----SERVICES PAGE ----*/
@@ -526,15 +539,23 @@ ul {
     align-items: center;
   }
   .navbar {
-    position: relative;
-    transform: translateX(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
   }
   .navbar a {
     font-size: 14px;
+    align-items: center;
   }
   .navbar ul {
-    margin: -10%;
     gap: 1rem;
+  }
+  .company-logo {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+    margin-bottom: 2rem;
   }
 }
 /* MOBILE - HERO PAGE */
@@ -655,7 +676,8 @@ ul {
 @media (max-width: 768px) {
   .about-hero {
     flex-direction: column;
-    padding: 3rem;
+    padding: 2rem;
+    text-align: center;
   }
   .about-title {
     margin-left: 0;
@@ -667,39 +689,50 @@ ul {
     margin-top: 10px;
   }
   .about-image {
-    width: 100%;
-    display: flex;
+    width: 90%;
+    max-width: 400px;
     justify-content: center;
   }
   .about-image img {
     width: 100%;
     max-width: 400px;
     height: auto;
+    object-fit: cover;
     border-radius: 10px;
   }
 }
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    padding: 2rem;
+    text-align: center;
   }
   .about-content-second {
-    width: 100%;
-    margin-left: 0; /* Centra el contenido */
+    width: 90%;
+    padding: 10px;
   }
 }
 @media (max-width: 768px) {
   .about-content {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
   }
   .about-title {
     font-size: 30px;
   }
   .about-btn {
     font-size: 14px;
+    margin: 0 auto;
+  }
+  .second-image {
+    width: 90%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  .second-image img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: cover;
   }
 }
 /*---- MEDIA QUERIES TABLET ----*/
@@ -709,12 +742,24 @@ ul {
     position: relative;
     align-items: center;
   }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
   .navbar a {
     font-size: 14px;
   }
   .navbar ul {
     margin: -10%;
     gap: 1rem;
+  }
+  .company-logo {
+    width: 100px;
+    height: auto;
+    padding: 8px;
+    margin-bottom: 3rem;
   }
 }
 /* TABLET - HERO PAGE */
@@ -799,9 +844,10 @@ ul {
 /* TABLET - ABOUT US PAGE */
 @media (max-width: 1024px) {
   .about-hero {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    padding: 4rem 2rem; /* Aumentar el padding para mejorar el espacio */
+    padding: 3rem;
+    text-align: center;
   }
   .about-title {
     margin-left: 20px;
@@ -813,9 +859,8 @@ ul {
     margin-top: 10px;
   }
   .about-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+    width: 80%;
+    max-width: 500px;
   }
   .about-image img {
     width: 100%;
@@ -836,8 +881,7 @@ ul {
 }
 
 .about-content {
-  width: 100%;
-  padding: 15px;
+  width: 90%;
 }
 
 .about-title {

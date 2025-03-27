@@ -14,9 +14,10 @@
     }
     
     .navbar{
-            display: flex;
-            flex-direction: row;
-            position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
     
     }
     
@@ -27,7 +28,6 @@
     }  
 
   .navbar ul{
-    margin: -10%;
     gap: 1rem;
 
   }

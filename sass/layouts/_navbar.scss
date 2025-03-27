@@ -19,6 +19,9 @@
     box-sizing: border-box;
 
     ul{
+    display: flex;
+    justify-content: center;
+
     text-decoration: none;
     background-color: rgba(111, 0, 155, 0.159);
     border-radius: $borderRadiusXlarge;
@@ -33,9 +36,9 @@
 
 .navbar{
     display: flex;
-    flex-direction: row;
-
-    position: relative;
+    justify-content: center;
+    flex-grow: 1;
+ 
 }
 
 .company-logo {
