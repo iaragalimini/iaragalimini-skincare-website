@@ -14,8 +14,10 @@
     }
     
     .navbar{
-        position: relative;
-        transform: translateX(0)
+            display: flex;
+            flex-direction: row;
+            position: relative;
+    
     }
     
     .navbar a {

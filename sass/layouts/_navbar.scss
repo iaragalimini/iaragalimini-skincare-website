@@ -23,7 +23,7 @@
     background-color: rgba(111, 0, 155, 0.159);
     border-radius: $borderRadiusXlarge;
     padding: 10px 25px;
-    
+    align-items: center;
         li a{
             text-decoration: none;
             color:rgb(255, 255, 255);
@@ -32,8 +32,10 @@
 }
 
 .navbar{
+    display: flex;
+    flex-direction: row;
+
     position: relative;
-    transform: translateX(0)
 }
 
 .company-logo {
