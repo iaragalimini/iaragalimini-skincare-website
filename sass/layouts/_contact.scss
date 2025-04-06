@@ -17,7 +17,6 @@
     @extend %flexBasico;
 }
 
-
 .contact-title{
 margin-bottom: -12px;
 }
@@ -59,5 +58,13 @@ input,textarea {
 textarea{
     resize:none;
 }
+
+.hero-button{
+    background-color:rgb(216, 171, 221);
+    color:#fff;
+ 
+ }
+
+
 }
 
