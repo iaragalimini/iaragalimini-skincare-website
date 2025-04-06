@@ -5,30 +5,29 @@
 @use "../utilities/mixins" as *;
 
 .about-hero {
+    @include flexAvanzado(flex,space-between);
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    @include flexAvanzado(flex,center);
     padding: 4rem;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .about-content {
-    width: 50%;
-    text-align: left;
     @include flexAvanzado(flex,center);
-    
+    flex: 1;
     flex-direction: column;
-    
-    gap: 0.7rem; /* Espacio entre el título, párrafo y botón */
-    height: 100%;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1rem;
     max-width: 600px;
+    width: 50%;
 }
 
 .title-about{
-    margin-left: 2rem;
+    margin-left: 1.3rem;
     margin-bottom: 0rem;
 }
 
@@ -41,17 +40,16 @@
 }
 
 .about-image {
-    display: flex;
+    @include flexAvanzado(flex,center);
+    flex: 1;
     flex-direction: row;
     width: 50%;
-    @include flexAvanzado(flex,center);
     align-items: center;
     max-width: 500px;
     overflow: hidden;
 
     img{
         width: 100%;
-        max-width: 500px;
         height: auto;
         object-fit: cover;
         border-radius: $borderRadiusMedium;
@@ -60,16 +58,16 @@
 
 
 .about-section{
-    align-items: center;
-    flex-wrap: wrap; 
     @include flexAvanzado(flex,space-between);
-    text-align: left;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 4rem;
     gap: 2rem;
     max-width: 1200px;
-    margin: 0 auto; /* Centrar la sección */
-    overflow: hidden;
+    margin: 0 auto;
 }
+
 
 .second-image{
         flex: 1; /* La imagen ocupa 1 parte del espacio */
@@ -78,10 +76,13 @@
 
 
 .about-content-second{
-    display: flex;
-    flex-direction: column; /* Asegura que el título y el párrafo estén en columna */
+    @include flexAvanzado(flex,center);
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
-    width: 50%; 
     gap: 1rem;
-    max-width: 600px;
+    max-width: 48%;
+    width: 50%;
+    padding: 1rem;
 }

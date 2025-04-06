@@ -228,19 +228,29 @@
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
-        padding: 2rem;
         text-align: center;
+        padding: 2rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        font-size: 26px; /* Ajusta el tamaño del título */
     }
 
     .about-content-second {
-        width: 100%;
-        padding: 10px;
+        width: 90%;
+        max-width: 800px;
+        padding: 0; 
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        margin-left: 0;
     }
+    
 }
 
 @media (max-width: 768px) {
     .about-content {
-        width: 90%;
+        width: 100%;
         padding: 10px;
     }
 
@@ -261,7 +271,7 @@
 
     .second-image img {
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
         object-fit: cover;
     }
 

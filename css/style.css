@@ -301,30 +301,31 @@ ul {
 
 /* ----ABOUT US PAGE----*/
 .about-hero {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
   padding: 4rem;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .about-content {
-  width: 50%;
-  text-align: left;
   display: flex;
   justify-content: center;
+  flex: 1;
   flex-direction: column;
-  gap: 0.7rem; /* Espacio entre el título, párrafo y botón */
-  height: 100%;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
   max-width: 600px;
+  width: 50%;
 }
 
 .title-about {
-  margin-left: 2rem;
+  margin-left: 1.3rem;
   margin-bottom: 0rem;
 }
 
@@ -338,33 +339,31 @@ ul {
 
 .about-image {
   display: flex;
+  justify-content: center;
+  flex: 1;
   flex-direction: row;
   width: 50%;
-  display: flex;
-  justify-content: center;
   align-items: center;
   max-width: 500px;
   overflow: hidden;
 }
 .about-image img {
   width: 100%;
-  max-width: 500px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
 }
 
 .about-section {
-  align-items: center;
-  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 4rem;
   gap: 2rem;
   max-width: 1200px;
-  margin: 0 auto; /* Centrar la sección */
-  overflow: hidden;
+  margin: 0 auto;
 }
 
 .second-image {
@@ -375,11 +374,15 @@ ul {
 
 .about-content-second {
   display: flex;
-  flex-direction: column; /* Asegura que el título y el párrafo estén en columna */
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
-  width: 50%;
   gap: 1rem;
-  max-width: 600px;
+  max-width: 48%;
+  width: 50%;
+  padding: 1rem;
 }
 
 /*----SERVICES PAGE ----*/
@@ -701,17 +704,26 @@ ul {
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
-    padding: 2rem;
     text-align: center;
+    padding: 2rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    font-size: 26px; /* Ajusta el tamaño del título */
   }
   .about-content-second {
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    max-width: 800px;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-left: 0;
   }
 }
 @media (max-width: 768px) {
   .about-content {
-    width: 90%;
+    width: 100%;
     padding: 10px;
   }
   .about-title {
@@ -728,7 +740,7 @@ ul {
   }
   .second-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     object-fit: cover;
   }
 }
